@@ -62,3 +62,5 @@ label {
   flex: 1; /* 新增這行：允許內容自動延伸 */
   word-wrap: break-word; /* 新增這行：允許文字折行 */
 }
+
+
