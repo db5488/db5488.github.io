@@ -48,6 +48,7 @@ ul {
   text-decoration: line-through;
   color: #aaa;
 }
+
 li {
   display: flex;
   flex-wrap: wrap; /* 新增這行：允許內容折行 */
