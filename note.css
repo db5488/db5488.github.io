@@ -1,66 +1,133 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
 }
 
 .container {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
   border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-}
-
-.input-container {
-  display: flex;
   margin-bottom: 10px;
 }
 
-input {
-  flex: 1;
-  padding: 5px;
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#memo-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 5px;
+  width:600px;
+  max-width: 600px;
+  box-sizing: border-box;
 }
 
 button {
-  padding: 5px 10px;
-  background-color: #4CAF50;
-  color: white;
+  padding: 10px;
+  cursor: pointer;
   border: none;
+  color: #fff;
+  font-size: 16px;
   border-radius: 5px;
+}
+
+#add-button {
+  background-color: #008CBA;
+  margin-right: 5px;
+}
+
+#search-button {
+  background-color: #4CAF50;
+}
+
+#memo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.memo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+.edit-button {
+  background-color: #008CBA;
+  margin-right: 5px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+span.text {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+span.completed {
+  text-decoration: line-through;
+  color: #aaa;
+  font-style: italic;
+}
+
+.completed-button {
+  background-color: #aaa;
+  margin-right: 5px;
+}
+
+function toggleCompleted(button) {
+  const li = button.parentElement;
+  li.classList.toggle("completed");
+  const textSpan = li.querySelector(".text");
+  textSpan.classList.toggle("completed");
 }
 
 .completed {
   text-decoration: line-through;
   color: #aaa;
+  font-style: italic;
 }
 
-li {
-  display: flex;
-  flex-wrap: wrap; /* 新增這行：允許內容折行 */
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
+.completed-checkbox {
+  margin-right: 5px;
 }
 
-label {
-  flex: 1; /* 新增這行：允許內容自動延伸 */
-  word-wrap: break-word; /* 新增這行：允許文字折行 */
+.completed-label {
+  background-color: #aaa;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
 }
-
-
