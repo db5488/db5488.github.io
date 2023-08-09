@@ -1,57 +1,53 @@
-const taskList = document.getElementById("taskList");
-const taskInput = document.getElementById("taskInput");
+const memoList = document.getElementById("memo-list");
+const memoInput = document.getElementById("memo-input");
 
-function addTask() {
-  const taskText = taskInput.value.trim();
-  if (taskText !== "") {
-    const listItem = createTaskItem(taskText);
-    taskList.appendChild(listItem);
-    taskInput.value = "";
+function toggleCompleted(checkbox) {
+  const li = checkbox.parentElement;
+  const textSpan = li.querySelector(".text");
+  textSpan.classList.toggle("completed");
+}
+
+
+function addMemo() {
+  const text = memoInput.value.trim();
+  if (text !== "") {
+    const li = document.createElement("li");
+    li.classList.add("memo-item");
+    li.innerHTML = `
+      <span class="text">${text}</span>
+       <button class="completed-button" onclick="toggleCompleted(this)">已完成</button>
+      <button class="edit-button" onclick="editMemo(this)">編輯</button>
+      <button class="delete-button" onclick="deleteMemo(this)">刪除</button>     
+    `;
+    memoList.appendChild(li);
+    memoInput.value = "";
   }
 }
 
-function createTaskItem(taskText) {
-  const listItem = document.createElement("li");
-
-  const taskLabel = document.createElement("label");
-  taskLabel.innerText = taskText;
-
-  const editButton = document.createElement("button");
-  editButton.innerText = "修改";
-  editButton.addEventListener("click", editTask);
-
-  const deleteButton = document.createElement("button");
-  deleteButton.innerText = "刪除";
-  deleteButton.addEventListener("click", deleteTask);
-
-  const completedButton = document.createElement("button");
-  completedButton.innerText = "已完成";
-  completedButton.addEventListener("click", toggleCompleted);
-
-  listItem.appendChild(taskLabel);
-  listItem.appendChild(editButton);
-  listItem.appendChild(deleteButton);
-  listItem.appendChild(completedButton);
-
-  return listItem;
-}
-
-function editTask() {
-  const listItem = this.parentNode;
-  const taskLabel = listItem.querySelector("label");
-  const newTask = prompt("請輸入新的任務：", taskLabel.innerText);
-
-  if (newTask !== null && newTask.trim() !== "") {
-    taskLabel.innerText = newTask.trim();
+function editMemo(button) {
+  const li = button.parentElement;
+  const textSpan = li.querySelector(".text");
+  const editText = prompt("請輸入新的備忘錄內容:", textSpan.textContent.trim());
+  if (editText !== null && editText.trim() !== "") {
+    textSpan.textContent = editText;
   }
 }
 
-function deleteTask() {
-  const listItem = this.parentNode;
-  taskList.removeChild(listItem);
+function deleteMemo(button) {
+  const li = button.parentElement;
+  memoList.removeChild(li);
 }
 
-function toggleCompleted() {
-  const listItem = this.parentNode;
-  listItem.classList.toggle("completed");
+function searchMemo() {
+  const searchTerm = memoInput.value.trim().toLowerCase();
+  const memos = memoList.getElementsByClassName("memo-item");
+  for (const memo of memos) {
+    const textSpan = memo.querySelector(".text");
+    const text = textSpan.textContent.trim().toLowerCase();
+    if (text.includes(searchTerm)) {
+      memo.style.display = "flex";
+    } else {
+      memo.style.display = "none";
+    }
+  }
 }
