@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>備忘錄</title>
-  <link rel="stylesheet" href="note.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>備忘錄</h1>
-    <div class="input-container">
-      <input type="text" id="taskInput" placeholder="新增任務">
-      <button onclick="addTask()">新增</button>
+    <h1>我的備忘錄</h1>
+    <div id="controls">
+      <input type="text" id="memo-input" placeholder="輸入新備忘錄">
+      <button id="add-button" onclick="addMemo()">新增</button>
+      <button id="search-button" onclick="searchMemo()">搜尋</button>
     </div>
-    <ul id="taskList"></ul>
+    <ul id="memo-list"></ul>
   </div>
-  <script src="note.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
