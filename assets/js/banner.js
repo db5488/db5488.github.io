@@ -5,12 +5,20 @@ const swiperWrapper = document.querySelector(
 
 // 預先定義 JSON 陣列資料
 let jsonData = [
-  { picSrc: '/img/inner/t5.jpg', iconSrc: '/mapIcon.png', content: 111 },
-  { picSrc: '/img/inner/u2.jpg', iconSrc: '/mapIcon.png', content: 222 },
-  { picSrc: '/img/inner/u4.jpg', iconSrc: '/mapIcon.png', content: 333 },
-  { picSrc: '/img/inner/u5.jpg', iconSrc: '/mapIcon.png', content: 444 },
-  { picSrc: '/img/inner/岳陽樓.jpg', iconSrc: '/mapIcon.png', content: 555 },
-  { picSrc: '/img/inner/鳳凰古城.jpg', iconSrc: '/mapIcon.png', content: 666 },
+  { picSrc: '/assets/img/inner/t5.jpg', iconSrc: '/mapIcon.png', content: 111 },
+  { picSrc: '/assets/img/inner/u2.jpg', iconSrc: '/mapIcon.png', content: 222 },
+  { picSrc: '/assets/img/inner/u4.jpg', iconSrc: '/mapIcon.png', content: 333 },
+  { picSrc: '/assets/img/inner/u5.jpg', iconSrc: '/mapIcon.png', content: 444 },
+  {
+    picSrc: '/assets/img/inner/岳陽樓.jpg',
+    iconSrc: '/mapIcon.png',
+    content: 555,
+  },
+  {
+    picSrc: '/assets/img/inner/鳳凰古城.jpg',
+    iconSrc: '/mapIcon.png',
+    content: 666,
+  },
 ];
 
 const setBanner = () => {
@@ -84,27 +92,67 @@ const setfocus = (thisObj) => {
   const area = thisObj.getAttribute('data-area');
   if (area == '台灣') {
     jsonData = [
-      { picSrc: '/img/outter/o1.jpg', iconSrc: '/mapIcon.png', content: 111 },
-      { picSrc: '/img/outter/o2.jpg', iconSrc: '/mapIcon.png', content: 222 },
-      { picSrc: '/img/outter/o3.jpg', iconSrc: '/mapIcon.png', content: 333 },
-      { picSrc: '/img/outter/o4.jpg', iconSrc: '/mapIcon.png', content: 444 },
-      { picSrc: '/img/outter/o5.jpg', iconSrc: '/mapIcon.png', content: 555 },
-      { picSrc: '/img/outter/o6.jpg', iconSrc: '/mapIcon.png', content: 666 },
-    ];
-  } else if (area == '江西') {
-    jsonData = [
-      { picSrc: '/img/inner/t5.jpg', iconSrc: '/mapIcon.png', content: 111 },
-      { picSrc: '/img/inner/u2.jpg', iconSrc: '/mapIcon.png', content: 222 },
-      { picSrc: '/img/inner/u4.jpg', iconSrc: '/mapIcon.png', content: 333 },
-      { picSrc: '/img/inner/u5.jpg', iconSrc: '/mapIcon.png', content: 444 },
       {
-        picSrc: '/img/inner/岳陽樓.jpg',
+        picSrc: '/assets/img/outter/o1.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 111,
+      },
+      {
+        picSrc: '/assets/img/outter/o2.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 222,
+      },
+      {
+        picSrc: '/assets/img/outter/o3.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 333,
+      },
+      {
+        picSrc: '/assets/img/outter/o4.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 444,
+      },
+      {
+        picSrc: '/assets/img/outter/o5.jpg',
         iconSrc: '/mapIcon.png',
         content: 555,
       },
       {
-        picSrc: '/img/inner/鳳凰古城.jpg',
+        picSrc: '/assets/img/outter/o6.jpg',
         iconSrc: '/mapIcon.png',
+        content: 666,
+      },
+    ];
+  } else if (area == '江西') {
+    jsonData = [
+      {
+        picSrc: '/assets/img/inner/t5.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 111,
+      },
+      {
+        picSrc: '/assets/img/inner/u2.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 222,
+      },
+      {
+        picSrc: '/assets/img/inner/u4.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 333,
+      },
+      {
+        picSrc: '/assets/img/inner/u5.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 444,
+      },
+      {
+        picSrc: '/assets/img/inner/岳陽樓.jpg',
+        iconSrc: '/mapIcon.png',
+        content: 555,
+      },
+      {
+        picSrc: '/assets/img/inner/鳳凰古城.jpg',
+        iconSrc: '/assets/mapIcon.png',
         content: 666,
       },
     ];
