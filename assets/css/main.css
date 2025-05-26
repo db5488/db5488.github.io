@@ -68,25 +68,6 @@ body {
   font-family: var(--default-font);
 }
 
-.body_img img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.body_img .img-mask::before {
-  content: '';
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
 a {
   color: var(--accent-color);
   text-decoration: none;

@@ -41,36 +41,6 @@
 
 <body class="index-page">
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // 取得目前的 URL 路徑
-        const path = window.location.pathname;
-
-        // 判斷是否為首頁（假設首頁是 / 或 /Home/Index）
-        const isHomeIndex = path === "/" || path.toLowerCase() === "/home/index";
-
-        if (isHomeIndex) {
-            // 建立圖片區塊
-            const bodyImgDiv = document.createElement("div");
-            bodyImgDiv.className = "body_img";
-
-            const imgMaskDiv = document.createElement("div");
-            imgMaskDiv.className = "img-mask";
-
-            const img = document.createElement("img");
-            img.src = "assets/img/hero-bg.jpg";
-            img.alt = "";
-
-            imgMaskDiv.appendChild(img);
-            bodyImgDiv.appendChild(imgMaskDiv);
-
-            // 將圖片插入到 body 的開頭
-            document.body.insertBefore(bodyImgDiv, document.body.firstChild);
-        }
-    });
-</script>
-
-
   <header id="header" class="header d-flex flex-column justify-content-center">
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -78,33 +48,9 @@
     <nav id="navmenu" class="navmenu"  style="white-space:nowrap;">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <!-- <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span style="white-space:nowrap;">關於我們</span></a></li> -->
-         <li>
-          <a href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout">
-            <i class="bi bi-file-earmark-text navicon"></i>
-            <span>關於我們 ▼</span>
-          </a>
-          <div class="collapse ps-3" id="collapseAbout" style="white-space:nowrap;">
-            <a class="nav-link text-white"   href="#resume"
-              style="background: var(--nav-hover-color);max-width: 100%;">
-              <i class="bi bi-file-earmark-text navicon"></i>
-            同鄉會簡介</a>
-            <a class="nav-link text-white" href="#subitem2"
-            style="background: var(--nav-hover-color);max-width: 100%;">
-              <i class="bi bi-file-earmark-text navicon"></i>
-            章程與規範</a>
-            <a class="nav-link text-white" href="#subitem2"
-            style="background: var(--nav-hover-color);max-width: 100%;">
-              <i class="bi bi-file-earmark-text navicon"></i>
-            歷任理事長</a>
-            <a class="nav-link text-white" href="#subitem2"
-            style="background: var(--nav-hover-color);max-width: 100%;">
-              <i class="bi bi-file-earmark-text navicon"></i>
-            友站連結</a>
-          </div>
-        </li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>活動資訊</span></a></li>
-        <li><a href="culture.html"><i class="bi bi-hdd-stack navicon"></i><span>江西文化</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span style="white-space:nowrap;">關於我們</span></a></li>
+        <li><a href="#testimonials"><i class="bi bi-images navicon"></i><span>活動資訊</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-hdd-stack navicon"></i><span>江西文化</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>江西文獻</span></a></li>
 	      <li><a href="#contact"><i class="bi bi-mailbox navicon"></i><span>聯絡我們</span></a></li>
       </ul>
@@ -143,202 +89,167 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+ <!-- Resume Section -->
+<section id="resume" class="resume section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
         <h2>關於我們</h2>
         <p>我們秉持「聯絡鄉情、團結合作、弘揚文化、服務鄉親」為核心宗旨，持續辦理公益、教育、宗教、文化與聯誼活動，期盼成為在台江西人心中溫暖的家。</p>
-      </div><!-- End Section Title -->
+    </div><!-- End Section Title -->
 
-      <div class="container">
+    <div class="container">
 
         <div class="row">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">創會緣起</h3>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="resume-title">創會緣起</h3>
 
-            <div class="resume-item pb-0">
-              <h4>台北市江西同鄉會</h4>
-              <p><em>成立於民國42年（西元1953年），由一群遷台的江西籍鄉親在台北景美地區發起創建，初衷是凝聚鄉情、互助扶持，並傳承江西精神。創會初期即購地籌建會館，歷經多任理事長接力發展，奠定今日組織規模。</em></p>
+                <div class="resume-item pb-0">
+                    <h4>台北市江西同鄉會</h4>
+                    <p><em>成立於民國42年（西元1953年），由一群遷台的江西籍鄉親在台北景美地區發起創建，初衷是凝聚鄉情、互助扶持，並傳承江西精神。創會初期即購地籌建會館，歷經多任理事長接力發展，奠定今日組織規模。</em></p>
 
-            </div><!-- Edn Resume Item -->
+                </div><!-- Edn Resume Item -->
 
-            <h3 class="resume-title">會館與設施</h3>
-            <div class="resume-item">
-              <h4>舒適場域，凝聚鄉親情誼</h4>
-              <ul>
-                <li><strong>萬壽宮：</strong>主祀江西守護神許真君，是本會宗教信仰中心。</li>
-                <li><strong>崇孝祠：</strong>兩側分別祭祀先烈與歷代鄉賢，弘揚孝道與忠義精神。</li>
-                <li><strong>文史館：</strong>展示江西文化、同鄉會歷史與移民故事，是珍貴的地方記憶空間。</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
+                <h3 class="resume-title">會館與設施</h3>
+                <div class="resume-item">
+                    <h4>舒適場域，凝聚鄉親情誼</h4>
+                    <ul>
+                        <li><strong>萬壽宮：</strong>主祀江西守護神許真君，是本會宗教信仰中心。</li>
+                        <li><strong>崇孝祠：</strong>兩側分別祭祀先烈與歷代鄉賢，弘揚孝道與忠義精神。</li>
+                        <li><strong>文史館：</strong>展示江西文化、同鄉會歷史與移民故事，是珍貴的地方記憶空間。</li>
+                    </ul>
+                </div><!-- Edn Resume Item -->
 
-            <h3 class="resume-title">我們的活動</h3>
-            <div class="resume-item">
-              <h4>凝聚共識，活絡鄉情</h4>
-              <ul>
-                <li>宗教祭典（許真君聖誕、清明祭祖等）</li>
-                <li>敬老聯誼、會員大會、春節團拜</li>
-                <li>《江西文獻》季刊發行</li>
-                <li>江西省探親、文化交流團</li>
-                <li>各類公益與獎助學金活動</li>
-             </ul>
-            </div><!-- Edn Resume Item -->
-          </div>
+                <h3 class="resume-title">我們的活動</h3>
+                <div class="resume-item">
+                    <h4>凝聚共識，活絡鄉情</h4>
+                    <ul>
+                        <li>宗教祭典（許真君聖誕、清明祭祖等）</li>
+                        <li>敬老聯誼、會員大會、春節團拜</li>
+                        <li>《江西文獻》季刊發行</li>
+                        <li>江西省探親、文化交流團</li>
+                        <li>各類公益與獎助學金活動</li>
+                    </ul>
+                </div><!-- Edn Resume Item -->
+            </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">文化傳承</h3>
-            <div class="resume-item">
-              <h4>弘揚江西文化，承載世代情誼</h4>
-              <p><em>我們重視江西文化與歷史的延續，除出版《江西文獻》保存地方記憶外，也積極與學術界、社區大學合作，舉辦文化講座、歷史座談，讓後代了解並認同自己的根與故事。</em></p>
-            </div><!-- Edn Resume Item -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="resume-title">文化傳承</h3>
+                <div class="resume-item">
+                    <h4>弘揚江西文化，承載世代情誼</h4>
+                    <p><em>我們重視江西文化與歷史的延續，除出版《江西文獻》保存地方記憶外，也積極與學術界、社區大學合作，舉辦文化講座、歷史座談，讓後代了解並認同自己的根與故事。</em></p>
+                </div><!-- Edn Resume Item -->
 
-            <div class="resume-item">
-              <h4>當代使命與未來展望</h4>
-              <p><em>面對人口高齡化與世代轉變的挑戰，本會正積極推動青年參與與組織現代化，透過數位平台、社群媒體與跨世代交流，注入新活力。我們希望讓更多年輕人認識江西、走進鄉情，讓傳承與創新同行。</em></p>
-            </div><!-- Edn Resume Item -->
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">友站連結</h3>
-            <div class="resume-item">
-              <h4>友好連結整理如下。敬請點閱參考。</h4>
-                <ul>
-                  <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/WanShouGong.pdf">西山萬壽宮</a><br />
-                  <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/ChongXiaoCi.pdf">崇孝祠</a><br />
-                  <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/YuDu.pdf">雩都同鄉會</a><br />
-                  <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/PingXiang.pdf">萍鄉同鄉會</a><br />
-                  <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/Xiushui.pdf">修水同鄉會</a>
-               </ul>
-            </div><!-- Edn Resume Item -->
-          </div>
+                <div class="resume-item">
+                    <h4>當代使命與未來展望</h4>
+                    <p><em>面對人口高齡化與世代轉變的挑戰，本會正積極推動青年參與與組織現代化，透過數位平台、社群媒體與跨世代交流，注入新活力。我們希望讓更多年輕人認識江西、走進鄉情，讓傳承與創新同行。</em></p>
+                </div><!-- Edn Resume Item -->
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="resume-title">友站連結</h3>
+                <div class="resume-item">
+                    <h4>友好連結整理如下。敬請點閱參考。</h4>
+                    <ul>
+                        <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/WanShouGong.pdf">西山萬壽宮</a>
+                        <br />
+                        <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/ChongXiaoCi.pdf">崇孝祠</a>
+                        <br />
+                        <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/YuDu.pdf">雩都同鄉會</a>
+                        <br />
+                        <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/PingXiang.pdf">萍鄉同鄉會</a>
+                        <br />
+                        <a style="font-size: 1.5rem;" Target="_blank" href="http://www.tpjxa.com.tw/home/Xiushui.pdf">修水同鄉會</a>
+                    </ul>
+                </div><!-- Edn Resume Item -->
+            </div>
 
         </div>
 
-      </div>
+    </div>
 
-    </section><!-- /Resume Section -->
+</section>
+<!-- /Resume Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>活動資訊</h2>
-        <p>此頁面架構中</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>江西文化</h2>
+        <p>
+            江西位於中國東南，是長江中游的重要省分。地形多山環水，擁有「贛江穿省、山水交織」的自然景觀。四季分明、雨量充沛，是典型的江南水鄉氣候。江西自古人傑地靈，素有「文章節義之邦」與「魚米之鄉」美譽，歷史文化底蘊深厚。
+        </p>
+    </div><!-- End Section Title -->
+    <div class="container">
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                <li data-filter="*" class="filter-active">全部</li>
+                <li data-filter=".filter-culture">人文地理</li>
+                <li data-filter=".filter-landscape">風景名勝</li>
+                <li data-filter=".filter-food">江西美食</li>
+            </ul><!-- End Portfolio Filters -->
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
+            <div class="row gy-4 isotope-container"
+                 data-aos="fade-up"
+                 data-aos-delay="200">
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
+            </div><!-- End Portfolio Container -->
         </div>
+    </div>
+</section><!-- /Portfolio Section -->
 
-      </div>
 
-    </section><!-- /Portfolio Section -->
+    <script>
+        // 取得後端傳來的 JSON 字串並解析
+        const cultureData = [
+  {"type": "culture", "name": "滕王閣（南昌市）", "note": "滕王閣是中國古代四大名樓之一，以王勃的《滕王閣序》聞名於世。這座樓閣最早建於唐代，歷經多次重建，如今是南昌的地標之一，也是中國古典文學與建築藝術的結晶。", "url": "https://zh.wikipedia.org/zh-tw/%E6%BB%95%E7%8E%8B%E9%98%81", "fileName": "assets/img/culture/Pavilion_of_Prince_Teng1.jpg"},
+  {"type": "culture", "name": "景德鎮古窯民俗博覽區（景德鎮市）", "note": "景德鎮有「瓷都」之稱，擁有千年制瓷歷史。古窯民俗博覽區展示了傳統制瓷工藝、古代窯爐和陶瓷文化，是了解中國陶瓷發展的重要場所。", "url": "https://tw.trip.com/travel-guide/attraction/jingdezhen/jingdezhen-ancient-kilns-and-folk-customs-museum-86620/", "fileName": "assets/img/culture/1lo3312000bp27qi811B7.jpg"},
+  {"type": "culture", "name": "白鹿洞書院（廬山）", "note": "雖然白鹿洞書院主要是儒學重鎮，但它也體現了儒釋道三教融合的文化氛圍。書院附近有佛教寺廟與道觀，歷代學者在此講學、修身，形成了獨特的宗教與哲學交融的文化景觀。", "url": "https://zh.wikipedia.org/zh-tw/%E7%99%BD%E9%B9%BF%E6%B4%9E%E4%B9%A6%E9%99%A2", "fileName": "assets/img/culture/Lushan_White_Lotus_Grotto_Academy.JPG"},
+  {"type": "landscape", "name": "廬山（九江市）", "note": "廬山不僅以自然風光著稱，也是一個文化名山。歷代文人墨客如白居易、蘇軾、李白等都曾在此留下詩篇。山中還有白鹿洞書院，是中國四大書院之一，對中國古代教育有深遠影響。", "url": "https://zh.wikipedia.org/zh-tw/%E5%BA%90%E5%B1%B1", "fileName": "assets/img/culture/Mount_Lushan_-_fog.JPG"},
+  {"type": "landscape", "name": "婺源", "note": "中國最美鄉村，以徽派建築與油菜花海著稱。", "url": "https://zh.wikipedia.org/zh-tw/%E5%A9%BA%E6%BA%90%E5%8E%BF", "fileName": "assets/img/culture/Autumn_sun_drying_at_Huangling.jpg"},
+  {"type": "landscape", "name": "三清山", "note": "道教名山，奇峰怪石令人驚嘆。", "url": "https://zh.wikipedia.org/zh-tw/%E4%B8%89%E6%B8%85%E5%B1%B1", "fileName": "assets/img/culture/1920px-Sanqingshan_6079.jpg"},
+  {"type": "food", "name": "三杯雞", "note": "用醬油、米酒與麻油慢煮，香氣濃厚。", "url": "https://zh.wikipedia.org/zh-tw/%E4%B8%89%E6%9D%AF", "fileName": "assets/img/culture/1280px-Sanbeiji.jpg"},
+  {"type": "food", "name": "南昌拌粉", "note": "涼粉拌辣油，是南昌街頭小吃代表。", "url": "https://baike.baidu.com/item/%E5%8D%97%E6%98%8C%E6%8B%8C%E7%B2%89/3130280", "fileName": "assets/img/culture/856d7cfc43ee47588adcfb0e532d302a_1280w_987h.jpg"},
+  {"type": "food", "name": "瓦罐湯", "note": "以砂鍋慢燉，保留原味與營養。", "url": "https://zh.wikipedia.org/zh-tw/%E7%93%A6%E7%BD%90%E6%B1%A4", "fileName": "assets/img/culture/800px-Waguan.Nanchang_xiaoguan.jpg"}
+];
+
+
+        // 對應 type 與 filter class
+        function getFilterClass(type) {
+            switch(type) {
+                case "culture": return "filter-culture";
+                case "landscape": return "filter-landscape";
+                case "food": return "filter-food";
+                default: return "";
+            }
+        }
+        // 產生子元素
+        function renderPortfolioItems(data) {
+            const container = document.querySelector('.isotope-container');
+            if (!container) return;
+            container.innerHTML = ""; // 清空
+
+            data.forEach(item => {
+                const filterClass = getFilterClass(item.type);
+                const div = document.createElement('div');
+                div.className = `col-lg-4 col-md-6 portfolio-item isotope-item ${filterClass}`;
+                div.innerHTML = `
+                    <img src="${item.fileName}" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.note}</p>
+                        <a href="${item.fileName}" title="${item.name}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        <a href="${item.url}" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
+                    </div>
+                `;
+                container.appendChild(div);
+                console.log(div)
+            });
+        }
+        // 執行渲染
+        renderPortfolioItems(cultureData);
+    </script>
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -450,7 +361,8 @@
 
       </div>
 
-    </section><!-- /Services Section -->
+    </section>
+    <!-- /Services Section -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">
