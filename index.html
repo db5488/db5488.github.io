@@ -41,6 +41,36 @@
 
 <body class="index-page">
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 取得目前的 URL 路徑
+        const path = window.location.pathname;
+
+        // 判斷是否為首頁（假設首頁是 / 或 /Home/Index）
+        const isHomeIndex = path === "/" || path.toLowerCase() === "/home/index";
+
+        if (isHomeIndex) {
+            // 建立圖片區塊
+            const bodyImgDiv = document.createElement("div");
+            bodyImgDiv.className = "body_img";
+
+            const imgMaskDiv = document.createElement("div");
+            imgMaskDiv.className = "img-mask";
+
+            const img = document.createElement("img");
+            img.src = "assets/img/hero-bg.jpg";
+            img.alt = "";
+
+            imgMaskDiv.appendChild(img);
+            bodyImgDiv.appendChild(imgMaskDiv);
+
+            // 將圖片插入到 body 的開頭
+            document.body.insertBefore(bodyImgDiv, document.body.firstChild);
+        }
+    });
+</script>
+
+
   <header id="header" class="header d-flex flex-column justify-content-center">
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
