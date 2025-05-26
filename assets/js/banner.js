@@ -21,9 +21,16 @@ let jsonData = [
   },
 ];
 
+let swiperInstance = null;
+
 const setBanner = () => {
   // 清空 swiper-wrapper 內容
   swiperWrapper.innerHTML = '';
+
+  // 銷毀舊的 Swiper 實例
+  if (swiperInstance) {
+    swiperInstance.destroy(true, true);
+  }
 
   // 根據 JSON 陣列動態產生 slide 元素
   jsonData.forEach((data) => {
@@ -51,17 +58,17 @@ const setBanner = () => {
   });
 
   // 初始化 Swiper (包含自動播放、置中放大及響應式斷點)
-  const swiper = new Swiper('.mySwiper', {
+  swiperInstance = new Swiper('.mySwiper', {
     slidesPerView: 3,
-    centeredSlides: true, // 啟用中間置中
-    speed: 700, // 平滑過渡效果
-    spaceBetween: 25, // slide 間距
+    centeredSlides: true,
+    speed: 700,
+    spaceBetween: 0,
     loop: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
-    initialSlide: -1, // 若要固定從第一張開始，則改為 0
+    initialSlide: -1,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -71,7 +78,7 @@ const setBanner = () => {
       clickable: true,
     },
     breakpoints: {
-      1024: { slidesPerView: 3, spaceBetween: 25 },
+      1024: { slidesPerView: 3, spaceBetween: 20 },
       768: { slidesPerView: 3, spaceBetween: 20 },
       480: { slidesPerView: 2 },
       0: { slidesPerView: 1 },
