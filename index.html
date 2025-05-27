@@ -425,6 +425,7 @@ document.addEventListener("DOMContentLoaded", function() {
             newLink.target = "_blank";
             newLink.style.display = "block";
             newLink.style.marginTop = "20px";
+
             // 插入到含指定 <p> 元素下方；若找不到則直接加入 underconstruction
             const targetP = undercon.querySelector("p");
             if (targetP) {
@@ -436,6 +437,10 @@ document.addEventListener("DOMContentLoaded", function() {
           // 更新連結的 href 與文字
           newLink.href = linkMap[navText];
           newLink.textContent = `前往 ${navText} 範例畫面`;
+          const h2El = undercon.querySelector("h2");
+          if (h2El) {
+            h2El.textContent = `${navText} --施工中`;
+          }
         }
       }
     });
