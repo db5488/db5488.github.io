@@ -439,7 +439,7 @@ document.addEventListener("DOMContentLoaded", function() {
           newLink.textContent = `前往 ${navText} 範例畫面`;
           const h2El = undercon.querySelector("h2");
           if (h2El) {
-            h2El.textContent = `${navText} --施工中`;
+            h2El.innerHTML = `<span style="color:red;">[${navText}]</span> --施工中`;
           }
         }
       }
