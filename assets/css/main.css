@@ -664,6 +664,22 @@ section,
 }
 
 /*--------------------------------------------------------------
+# underconstruction Section
+--------------------------------------------------------------*/
+.underconstruction {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.underconstruction .content {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
 .skills .progress {
@@ -1073,6 +1089,16 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact .info-item + .info-item {
   margin-top: 40px;
 }
