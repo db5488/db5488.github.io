@@ -1,151 +1,90 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>江西文化 | 台北市江西同鄉會</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <title>Debugging</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/flipbook/lightbox.css" />
+    <link rel="stylesheet" href="assets/css/flipbook/font-awesome.min.css" />
+    <style>
+      .thumbnail {
+        display: inline-block;
+        width: 120px;
+        height: 160px;
+        background-color: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      .fullscreen {
+        background-color: #333;
+      }
+    </style>
   </head>
-  <body class="bg-light">
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white border-bottom mb-4"
-    >
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">
-          <img
-            src="assets/img/favicon.png"
-            alt="Logo"
-            height="40"
-            class="me-2"
-          />
-          台北市江西同鄉會
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>
-    <div class="container py-5">
-      <h1 class="text-center mb-4">江西文化</h1>
-
-      <!-- 選單 -->
-      <ul
-        class="nav nav-pills justify-content-center mb-4"
-        id="cultureTabs"
-        role="tablist"
-      >
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="tab-style-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#tab-style"
-            type="button"
-            role="tab"
-          >
-            江西風貌
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="tab-human-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#tab-human"
-            type="button"
-            role="tab"
-          >
-            人文地理
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="tab-scenery-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#tab-scenery"
-            type="button"
-            role="tab"
-          >
-            風景名勝
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="tab-food-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#tab-food"
-            type="button"
-            role="tab"
-          >
-            江西美食
-          </button>
-        </li>
-      </ul>
-
-      <!-- 內容 -->
-      <div
-        class="tab-content bg-white p-4 rounded shadow"
-        id="cultureTabsContent"
-      >
-        <!-- 江西風貌 -->
-        <div class="tab-pane fade show active" id="tab-style" role="tabpanel">
-          <h3>🌾 江西風貌</h3>
-          <p>
-            江西位於中國東南，是長江中游的重要省分。地形多山環水，擁有「贛江穿省、山水交織」的自然景觀。
-            四季分明、雨量充沛，是典型的江南水鄉氣候。江西自古人傑地靈，素有「文章節義之邦」與「魚米之鄉」美譽。
-          </p>
-        </div>
-
-        <!-- 人文地理 -->
-        <div class="tab-pane fade" id="tab-human" role="tabpanel">
-          <h3>🏯 人文地理</h3>
-          <p>
-            江西自古為中原與嶺南的重要通道，孕育出璀璨的人文傳統。宋代理學大師朱熹曾在此講學，
-            陶淵明、王安石、歐陽修等文豪皆與江西淵源深厚。江西也是客家文化的重要聚落之一，
-            民間信仰、語言、風俗多元融合。
-          </p>
-        </div>
-
-        <!-- 風景名勝 -->
-        <div class="tab-pane fade" id="tab-scenery" role="tabpanel">
-          <h3>🏞 風景名勝</h3>
-          <ul>
-            <li>
-              <strong>廬山：</strong>雲霧繚繞、詩意山水，為中國十大名山之一。
-            </li>
-            <li><strong>井岡山：</strong>中國革命聖地，有豐富紅色歷史資源。</li>
-            <li>
-              <strong>婺源：</strong>中國最美鄉村，以徽派建築與油菜花海著稱。
-            </li>
-            <li><strong>三清山：</strong>道教名山，奇峰怪石令人驚嘆。</li>
-          </ul>
-        </div>
-
-        <!-- 江西美食 -->
-        <div class="tab-pane fade" id="tab-food" role="tabpanel">
-          <h3>🍲 江西美食</h3>
-          <ul>
-            <li><strong>三杯雞：</strong>以醬油、米酒與麻油燜煮，香氣濃厚。</li>
-            <li><strong>南昌拌粉：</strong>涼粉拌辣油，是南昌街頭經典小吃。</li>
-            <li><strong>瓦罐湯：</strong>以砂鍋長時間燉煮，保留食材原味。</li>
-            <li>
-              <strong>贛州米粉、景德鎮豆皮：</strong>在地特色料理，風味十足。
-            </li>
-          </ul>
-        </div>
-      </div>
+  <body>
+    <div class="books">
+      <div class="thumbnail" data-book-id="book1">Book 1</div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+<script src="assets/vendor/flipbook/jquery.min.js"></script>
+<script src="assets/vendor/flipbook/html2canvas.min.js"></script>
+<script src="assets/vendor/flipbook/three.min.js"></script>
+<script src="assets/vendor/flipbook/pdf.min.js"></script>
+<script src="assets/vendor/flipbook/3dflipbook.min.js"></script>
+<script src="assets/vendor/flipbook/lightbox.js"></script>
+
+<script type="text/javascript">
+  window.jQuery(function () {
+    var $ = window.jQuery;
+    var styleClb = function () {
+        $('.fb3d-modal').removeClass('light').addClass('dark');
+      },
+      booksOptions = {
+        book1: {
+          pdf: 'assets/doc/266.pdf',
+          template: {
+            html: 'assets/templates/default-book-view.html',
+            styles: ['assets/css/flipbook/short-white-book-view.css'],
+            links: [
+              {
+                rel: 'stylesheet',
+                href: 'assets/css/flipbook/font-awesome.min.css',
+              },
+            ],
+            script: 'assets/vendor/flipbook/default-book-view.js',
+            sounds: {
+              startFlip: 'assets/sounds/start-flip.mp3',
+              endFlip: 'assets/sounds/end-flip.mp3',
+            },
+          },
+          styleClb: styleClb,
+        },
+      };
+
+    var instance = {
+      scene: undefined,
+      options: undefined,
+      node: $('.fb3d-modal .mount-container'),
+    };
+
+    var modal = $('.fb3d-modal');
+    modal.on('fb3d.modal.hide', function () {
+      instance.scene.dispose();
+    });
+    modal.on('fb3d.modal.show', function () {
+      instance.scene = instance.node.FlipBook(instance.options);
+      instance.options.styleClb();
+    });
+    $('.books')
+      .find('.thumbnail')
+      .click(function (e) {
+        var target = $(e.target);
+        while (target[0] && !target.attr('data-book-id')) {
+          target = $(target[0].parentNode);
+        }
+        if (target[0]) {
+          instance.options = booksOptions[target.attr('data-book-id')];
+          $('.fb3d-modal').fb3dModal('show');
+        }
+      });
+  });
+</script>
