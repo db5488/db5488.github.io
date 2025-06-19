@@ -43,6 +43,10 @@
         rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css"
         rel="stylesheet">
+  <link rel="stylesheet"
+        href="assets/vendor/flipbook/css/lightbox.css" />
+  <link rel="stylesheet"
+        href="assets/vendor/flipbook/css/font-awesome.min.css" />
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css"
@@ -50,30 +54,28 @@
   <link rel="stylesheet"
         href="assets/css/banner.css" />
 
-  <!-- document CSS File -->
-  <link rel="stylesheet"
-        href="assets/css/flipbook/lightbox.css" />
-  <link rel="stylesheet"
-        href="assets/css/flipbook/font-awesome.min.css" />
-    <style>
-      .thumbnail {
-        display: inline-block;
-        width: 120px;
-        height: 160px;
-        background-color: #ccc;
-        margin: 0 5px;
-        cursor: pointer;
-      }
-      .fullscreen {
-        background-color: #333;
-      }
-      .thumbnail {
-    display: inline-block;
-}
-.books {
-    text-align: center;
-}
-    </style>
+  <style>
+    .thumbnail {
+      display: inline-block;
+      width: 120px;
+      height: 160px;
+      background-color: #ccc;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .fullscreen {
+      background-color: #333;
+    }
+
+    .thumbnail {
+      display: inline-block;
+    }
+
+    .books {
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -436,168 +438,93 @@
            data-aos="fade-up">
         <h2>江西文獻</h2>
         <p>本會致力於保存與傳承江西文化，定期出版《江西文獻》季刊，收錄各類文章、研究與鄉親故事。</p>
-        <p style="color: red;">此為 pdf 檔翻頁範例程式</p>
+        <p style="color: red;">pdf 檔翻頁範例程式</p>
       </div><!-- End Section Title -->
 
       <div class="container"
            data-aos="fade-up"
            data-aos-delay="100">
-            <div class="books">
-              <div class="thumbnail"
-                   data-book-id="book1">江西文獻-266期
-              </div>
-            </div>
+        <div class="books">
+          <div class="thumbnail"
+               data-book-id="book1">江西文獻-266期
+          </div>
         </div>
-      <script src="assets/vendor/flipbook/jquery.min.js"></script>
-<script src="assets/vendor/flipbook/html2canvas.min.js"></script>
-<script src="assets/vendor/flipbook/three.min.js"></script>
-<script src="assets/vendor/flipbook/pdf.min.js"></script>
-<script src="assets/vendor/flipbook/3dflipbook.min.js"></script>
-<script src="assets/vendor/flipbook/lightbox.js"></script>
-<script type="text/javascript">
-  window.jQuery(function () {
-    var $ = window.jQuery;
-    var styleClb = function () {
-        $('.fb3d-modal').removeClass('light').addClass('dark');
-      },
-      booksOptions = {
-        book1: {
-          pdf: 'assets/doc/266.pdf',
-          template: {
-            html: 'assets/templates/default-book-view.html',
-            styles: ['assets/css/flipbook/short-white-book-view.css'],
-            links: [
-              {
-                rel: 'stylesheet',
-                href: 'assets/css/flipbook/font-awesome.min.css',
-              },
-            ],
-            script: 'assets/vendor/flipbook/default-book-view.js',
-            sounds: {
-              startFlip: 'assets/sounds/start-flip.mp3',
-              endFlip: 'assets/sounds/end-flip.mp3',
-            },
-          },
-          styleClb: styleClb,
-        },
-      };
-
-    var instance = {
-      scene: undefined,
-      options: undefined,
-      node: $('.fb3d-modal .mount-container'),
-    };
-
-    var modal = $('.fb3d-modal');
-    modal.on('fb3d.modal.hide', function () {
-      instance.scene.dispose();
-    });
-    modal.on('fb3d.modal.show', function () {
-      instance.scene = instance.node.FlipBook(instance.options);
-      instance.options.styleClb();
-    });
-    $('.books')
-      .find('.thumbnail')
-      .click(function (e) {
-        var target = $(e.target);
-        while (target[0] && !target.attr('data-book-id')) {
-          target = $(target[0].parentNode);
-        }
-        if (target[0]) {
-          instance.options = booksOptions[target.attr('data-book-id')];
-          $('.fb3d-modal').fb3dModal('show');
-        }
-      });
-  });
-</script>
-
-    <!-- Contact Section -->
-    <section id="contact"
-             class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title"
-           data-aos="fade-up">
-        <h2>聯絡我們</h2>
-        <p>有關會務諮詢、活動參與或建議事項，歡迎與本會聯繫</p>
-      </div><!-- End Section Title -->
-
-      <div class="container"
-           data-aos="fade"
-           data-aos-delay="100">
-        <table style="margin: 0 auto;border-collapse: separate; border-spacing: 0 30px;">
-          <tr>
-            <td>
-              <div class="mb-5"
-                   data-aos="fade-up"
-                   data-aos-delay="200">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.9811420162664!2d121.54748007488438!3d25.000756739630315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa10f4510c51%3A0x12bfe7cc10a488eb!2z5Y-w5YyX5biC5rGf6KW_5ZCM6YSJ5pyD!5e0!3m2!1szh-TW!2stw!4v1748337796615!5m2!1szh-TW!2stw"
-                        width="800"
-                        height="300"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div><!-- End Google Maps -->
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="info-item d-flex"
-                   data-aos="fade-up"
-                   data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>地址</h3>
-                  <p>11689 台北市文山區興隆路2段116號2樓</p>
-                </div>
-              </div><!-- End Info Item -->
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="info-item d-flex"
-                   data-aos="fade-up"
-                   data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>歡迎來電</h3>
-                  <p>+886 2-2931-8014</p>
-                </div>
-              </div><!-- End Info Item -->
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="info-item d-flex"
-                   data-aos="fade-up"
-                   data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>歡迎來信</h3>
-                  <p>chiang.si@msa.hinet.net</p>
-                </div>
-              </div><!-- End Info Item -->
-            </td>
-          </tr>
-          <!-- <tr>
-            <td>
-              <div class="info-item d-flex"
-                   data-aos="fade-up"
-                   data-aos-delay="400">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Google 地圖</h3>
-                  <p><a href="https://www.google.com/maps/place/11689+台北市文山區興隆路2段116號2樓"
-                       target="_blank">查看地圖</a>
-                </div>
-              </div>
-            </td>
-          </tr> -->
-        </table>
       </div>
 
-    </section><!-- /Contact Section -->
+
+      <!-- Contact Section -->
+      <section id="contact"
+               class="contact section">
+
+        <!-- Section Title -->
+        <div class="container section-title"
+             data-aos="fade-up">
+          <h2>聯絡我們</h2>
+          <p>有關會務諮詢、活動參與或建議事項，歡迎與本會聯繫</p>
+        </div><!-- End Section Title -->
+
+        <div class="container"
+             data-aos="fade"
+             data-aos-delay="100">
+          <table style="margin: 0 auto;border-collapse: separate; border-spacing: 0 30px;">
+            <tr>
+              <td>
+                <div class="mb-5"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.9811420162664!2d121.54748007488438!3d25.000756739630315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa10f4510c51%3A0x12bfe7cc10a488eb!2z5Y-w5YyX5biC5rGf6KW_5ZCM6YSJ5pyD!5e0!3m2!1szh-TW!2stw!4v1748337796615!5m2!1szh-TW!2stw"
+                          width="800"
+                          height="300"
+                          style="border:0;"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div><!-- End Google Maps -->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="info-item d-flex"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>地址</h3>
+                    <p>11689 台北市文山區興隆路2段116號2樓</p>
+                  </div>
+                </div><!-- End Info Item -->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="info-item d-flex"
+                     data-aos="fade-up"
+                     data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>歡迎來電</h3>
+                    <p>+886 2-2931-8014</p>
+                  </div>
+                </div><!-- End Info Item -->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="info-item d-flex"
+                     data-aos="fade-up"
+                     data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>歡迎來信</h3>
+                    <p>chiang.si@msa.hinet.net</p>
+                  </div>
+                </div><!-- End Info Item -->
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      </section><!-- /Contact Section -->
 
   </main>
 
@@ -610,6 +537,7 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -621,6 +549,12 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/banner.js"></script>
+  <script src="assets/vendor/flipbook/js/jquery.min.js"></script>
+  <script src="assets/vendor/flipbook/js/html2canvas.min.js"></script>
+  <script src="assets/vendor/flipbook/js/three.min.js"></script>
+  <script src="assets/vendor/flipbook/js/pdf.min.js"></script>
+  <script src="assets/vendor/flipbook/js/3dflipbook.min.js"></script>
+  <script src="assets/vendor/flipbook/js/lightbox.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
